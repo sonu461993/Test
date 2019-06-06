@@ -1,0 +1,124 @@
+@keyframes logoAnimate{
+	
+	0% {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	10%{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(5);
+	}
+	
+	40%{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1) rotate(360degree);
+	}
+	
+	70%{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1) rotate(360degree);
+	}
+	
+	100%{
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform: translate(0%, 0%) scale(1) rotate(0);
+	}
+}
+
+@keyframes abstractDisplay{
+	0%{
+		opacity: 0;
+		width: 0;
+		
+	}
+	
+	100%{
+		width: 15%;
+		opacity: 1 !important;
+	}
+}
+@keyframes supermanEntery{
+	0% {
+		position: absolute;
+		opacity: 0 !important;
+		position: absolute;
+		top: -500px;
+		left: 70%;
+		
+	}
+	
+	20%{
+		position: absolute;
+		opacity: 1 !important;
+		position: absolute;
+		top: 50%;
+		left: 70%;
+		transform: translate(-50%, -50%);
+	}
+	50%{
+		position: absolute;
+		opacity: 1 !important;
+		top: 50%;
+		left: 70%;
+		transform: translate(-50%, -50%);
+	}
+	
+	80%{
+		position: absolute;
+		opacity: 1 !important;
+		position: absolute;
+		top: 50%;
+		left: 70%;
+		transform: translate(-50%, -50%);
+	}
+	100%{
+		position: absolute;
+		opacity: 1;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		left: 0;
+	}
+}
+
+
+@keyframes section_2Animation{
+	0%{
+		border-width: 0;
+		height: 0;
+	}
+	100%{
+		border-width: 0.5px;
+		height: 72%;
+	}
+}
+
+@keyframes titleAnimation{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+@keyframes blink{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+	
+}

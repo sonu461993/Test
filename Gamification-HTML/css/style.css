@@ -1,0 +1,1355 @@
+body, html, *{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial';
+    font-size: 1em;
+    
+}
+
+html, body{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+body{
+    color: #fff;
+    
+}
+
+section{
+	position: relative;
+}
+.launch_screen{
+	display: flex;
+	width: 1500px;
+	height: 100vh;
+	background-image: url('../images/home/background.png');
+	background-size: 100% 100%;
+}
+
+.page-title{
+    font-family: 'Bangers', cursive;
+}
+
+.main-container{
+	display: flex;
+	flex-wrap: nowrap;
+	width: 11500px;
+	font-size: 0.9em;
+}
+
+.logo{
+	display: inline-block;
+	padding: 30px;
+	animation: logoAnimate 2s ease;
+	animation-delay: 1s;
+	position: absolute; 
+}
+.logo img{
+	width: 100%;
+}
+
+.section_1, .section_2{
+	display: inline-block;
+    position: relative;
+}
+
+.section_1{
+	width: 60vw;
+	animation: displayItem 0.5s linear forwards;
+	animation-delay: 5s;
+}
+
+.section_2{
+	width: 40vw;
+	position: relative;
+    height: 100%;
+    z-index: 99;
+}
+.left_part{
+	display: inline-block;
+    width: 100px;
+	position: relative;
+}
+
+.center{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+	opacity: 0;
+	animation: supermanEntery 2s ease forwards;
+	animation-delay: 3s;
+}
+
+.center:before{
+	content: '';
+	position: absolute;
+	background: url('../images/home/abstract_01.png');
+	background-repeat: no-repeat;
+	width: 0;
+	height: 100%;
+	left: 30px;
+    background-size: contain;
+	top: 10%;
+	animation: abstractDisplay 1s ease forwards;
+	animation-delay: 4s;
+}
+
+.center:after{
+	content: '';
+	position: absolute;
+	background: url('../images/home/abstract_02.png');
+	background-repeat: no-repeat;
+	width: 0;
+	height: 100%;
+	right: 40px;
+    background-size: contain;
+	top: 10%;
+	animation: abstractDisplay 1s ease forwards;
+	animation-delay: 5s;
+}
+
+.superman{
+	position: relative;
+    display: inline-block;
+    width: 40%;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    z-index: 11;
+    transform: translateX(-50%);
+}
+
+.superman img{
+	width: 100%;
+}
+
+.superman:before{
+	content: '';
+    position: absolute;
+    left: -5px;
+    bottom: -25px;
+    width: 100%;
+    height: 50%;
+    background: url('../images/home/shadow.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
+	background-size: 100%;
+}
+
+.superman:after{
+	content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+	transform: translateX(-55%);
+    background: url('../images/home/shadow1.png');
+	background-size: 100% 100%;
+    width: 380px;
+    height: 480px;
+    z-index: -1;
+
+}
+
+
+.stars{
+	position: absolute;
+    right: 10px;
+    top: 20px;
+	
+}
+.stars span{
+	display: block;
+	margin-bottom: 10px;
+	transform: scale(0);
+	
+}
+
+ .stars span:nth-child(1){
+	animation-delay: 12s;
+}
+
+.stars span:nth-child(2){
+	animation-delay: 13s;
+}
+
+.stars span:nth-child(3){
+	animation-delay: 14s;
+}
+.stars span:nth-child(4){
+	animation-delay: 15s;
+}
+
+.stars span:nth-child(5){
+	animation-delay: 16s;
+} 
+
+
+.yellow{
+	color: #f7bd07;
+	letter-spacing: 3px;
+	font-family: 'Bangers', cursive;
+}
+
+.gold{
+	color: #e4ad0e;
+}
+
+.section_2 .title{
+	color: #ffffff;
+    font-size: 4em;
+    width: 100%;
+	transform-origin: center;
+	transform: scale(0);
+    text-transform: uppercase;
+    padding: 2em 0 0 20px;
+    text-shadow: 3px 2px 20px #000000;
+    letter-spacing: 5px;
+	animation: titleAnimation 2s ease forwards;
+	animation-delay: 7s;
+}
+
+.section_2 .section_2_content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.section_2:before{
+    content: '';
+	border: 0px solid #ffffff;
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #fff;
+    left: 0;
+    top: 0;	
+	animation: section_2Animation 1s ease forwards;
+	animation-delay: 6s;
+	
+}
+
+
+.text-instruction{
+	font-weight: bold;
+	width: 80%;
+    padding: 1em 20px;
+	opacity: 0;;
+}
+
+.arrow_1{
+	width: 50%;
+    margin: auto;
+    margin-top: 30px;
+	transform: scale(0);
+	animation: blink 2s linear infinite;
+}
+
+
+/* ---------------------------------------------- */
+	/* Stage 1 */
+/* ---------------------------------------------- */
+
+.stage_1, .stage_2, .stage_3, .stage_4, .stage_5{
+	position: relative;
+}
+
+.stage_1{
+	background: url('../images/stage_01/stage_01_bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 2000px;
+}
+
+
+.step_title{
+	position: absolute;
+    top: 40%;
+    left: 30px;
+    transform-origin: top left;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+	font-family: 'Bangers', cursive;
+    transform: rotate(-90deg) translateX(-50%);	
+	letter-spacing: 4px;
+}
+.stage_num{
+	background-color: #000000;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+	color: #553edd;
+	text-align: center;
+	line-height: 50px;
+	font-size: 1.5em;
+}
+	
+.flying_superman{
+    position: absolute;
+    left: -250px;
+    bottom: 80px;
+    z-index: 99;
+}
+
+.stage_1 .step_title{
+    font-size: 1.2em;
+}
+
+.step_1_content {
+    width: 100%;
+    height: 672px;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+}
+.step_1_point_1{
+	width: 180px;
+    height: 120px;
+    position: absolute;
+    bottom: 25%;
+    left: 140px;
+}
+
+.step_1_point_1 .outer{
+	position: relative;
+}
+
+.step_1_point_1 .outer img{
+	width: 100%;
+}
+.step_1_point_1 p{
+	position: absolute;
+    top: 15px;
+    left: 40px;
+}
+
+.step_1_point_1:before{
+	content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 80px;
+    top: 110px;
+    background: url('../images/stage_01/arrow_01.png');
+	background-repeat: no-repeat;
+}
+
+
+.step_1_point_2{
+	position: absolute;
+    bottom: 70px;
+    left: 350px;
+    width: 130px;
+    height: 120px;
+	
+}
+
+.step_1_point_2:before{
+	    content: '';
+    width: 160px;
+    position: absolute;
+    top: -50px;
+    left: 100%;
+    height: 100px;
+    background: url('../images/stage_01/arrow_02.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+
+.step_1_point_3{
+	position: absolute;
+    bottom: 240px;
+    left: 410px;
+    width: 250px;
+    padding: 5px;	
+}
+
+.step_1_point_3:before{
+	content: '';
+    position: absolute;
+    top: -50%;
+    height: 100px;
+    width: 100px;
+    background: url('../images/stage_01/arrow_03.png');
+	background-repeat: no-repeat;
+}
+
+
+.step_1_point_4{
+	position: absolute;
+    top: 340px;
+    left: 445px;
+}
+
+.step_1_point_4:after{
+	    content: '';
+    position: absolute;
+    bottom: 25px;
+    left: -15px;
+    height: 150px;
+    width: 150px;
+    background: url('../images/stage_01/arrow_04.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.step_1_point_5{
+	position: absolute;
+    top: 120px;
+    left: 480px;
+}
+
+.step_1_point_5 .outer{
+	position: relative;
+}
+.step_1_point_5 p {
+	    position: absolute;
+    top: 50%;
+    width: 100px;
+    margin: auto;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -10px;
+}
+
+.step_1_point_5:before{
+	content: '';
+    position: absolute;
+    background: url('../images/stage_01/arrow_05.png');
+    background-repeat: no-repeat;
+    /* top: 0; */
+    width: 100px;
+    height: 100px;
+    left: 160px;
+    bottom: 0;
+}
+
+.step_1_point_5:after{
+	content: '';
+	position: absolute;
+	background: url('../images/stage_01/super_man_02.png');
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
+	left: 100%;
+}
+.step_1_point_6{
+	background: rgba(30,5,70, 0.8);
+	position: absolute;
+    left: 710px;
+    top: 190px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.step_1_point_6 .outer{
+	position: relative;
+    bottom: 20px;
+    text-align: center;
+}
+
+.step_1_point_6 p {
+	position: absolute;
+    left: 80px;
+    top: 100%;
+	width: 230px;
+    text-align: left;
+} 
+
+.step_1_point_6:after{
+	content: '';
+    position: absolute;
+    background: url('../images/stage_01/arrow_06.png');
+    width: 130px;
+    height: 130px;
+    background-repeat: no-repeat;
+    top: 180px;
+    left: 70px;
+}
+
+
+.step_1_point_7{
+	position: absolute;
+    bottom: 150px;
+    left: 940px;
+    width: 250px;
+}
+
+.step_1_point_7 .outer{
+	position: relative;
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.step_1_point_7 p {
+	 width: 100px;
+}
+
+
+.step_1_point_7:before{
+	content: '';
+	position: absolute;
+	background: url('../images/stage_01/arrow_07.png');
+	background-repeat: no-repeat;
+	top: -70%;
+    right: -90px;
+	width: 100px;
+	height: 100px;
+}
+
+.step_1_point_7:after{
+	content: '';
+    position: absolute;
+    background: url('../images/stage_01/super_man_03.png');
+    top: -90px;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    left: 80%;
+}
+
+.step_1_point_8{
+    width: 300px;
+    left: 1200px;
+    position: absolute;
+    top: 50px;
+}
+
+.step_1_point_8 .outer .text{
+    flex: 1;
+}
+
+.step_1_point_8 .outer p:nth-child(2){
+	margin-top: 10px;
+}
+.step_1_point_8 img{
+	width: 70%;
+}
+.step_1_point_9{
+	position: absolute;
+    bottom: 60px;
+    right: 110px;
+    width: 250px;
+}
+
+.step_1_point_8 .imgBackground{
+    background: url('../images/stage_01/patch.png');
+    text-align: center;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    flex: 2;
+}
+
+.step_1_point_8 .outer{
+    display: flex;
+    height: 200px;
+    width: 440px;
+    justify-content: space-between;
+}
+
+.step_1_point_8:before {
+    content: '';
+    background: url('../images/stage_01/effect.png');
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    mix-blend-mode: lighten;
+    opacity: 0.2;
+    height: 100%;
+    top: 70%;
+    width: 550px;
+    background-repeat: no-repeat;
+    height: 550px;
+}
+
+.step_1_point_9 .outer{
+	display: flex;
+}
+
+.step_1_point_9 .text{
+	width: 140px;
+    position: absolute;
+    right: -60px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    top: 25px;
+	text-shadow: 3px 0px 10px rgba(0,0,0);
+	font-family: 'Bangers', cursive;
+	letter-spacing: 3px;
+}
+
+.step_1_point_9 img{
+	z-index: 99;
+}
+
+.step_1_point_9:before{
+	content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../images/stage_01/effect1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 100px;
+    top: 15px;
+}
+
+
+/* ---------------------------------------------------------------- */
+
+						/* Stage 2 */
+						
+/* ---------------------------------------------------------------- */
+
+.stage_2{
+	background: url('../images/stage_02/stage_02_bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+    width: 2500px;
+}
+
+.stage_2 .stage_num{
+	color: #c42727;
+}
+
+.step_2_point_1{
+    left: 300px;
+    position: absolute;
+    top: 50px;
+
+}
+.step_2_content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 672px;
+}
+
+.step_2_point_1 .outer{
+    display: flex;
+}
+.step_2_point_1 .text{
+    width: 150px;
+    position: relative;
+    right: -90px;
+    text-align: right;
+}
+
+.step_2_point_1 .text-2{
+    font-weight: bold;
+    width: 170px;
+    font-size: 1.2em;
+    position: absolute;
+    top: 70%;
+    left: 90%;
+}
+
+.step_2_point_1 .text-2:before{
+    content: '';
+    position: absolute;
+    background: url('../images/stage_02/arrow_01.png');
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    top: 50px;
+    left: 50%;
+}
+
+.step_2_point_2{
+    position: absolute;
+    left: 420px;
+    top: 310px;
+}
+
+.step_2_point_2 .outer:before{
+    content: '';
+    background: url('../images/stage_02/arrow_02.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 80%;
+    left: 278px;
+}
+.step_2_point_2 .text{
+    width: 250px;
+    position: absolute;
+    left: 50px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.step_2_point_3{
+    position: absolute;
+    top: 330px;
+    left: 1000px;
+}
+
+.step_2_point_3:before{
+    content: '';
+    background: url('../images/stage_02/badge.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -70px;
+    left: 90px;
+    width: 100%;
+    height: 150px;
+    
+}
+
+.step_2_point_3:after{
+    content: '';
+    background: url('../images/stage_02/shield.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    left: -40px;
+}
+
+.step_2_point_3 .imgBackground{
+    width: 110px;
+    height: 110px;
+    background: #000;
+    border-radius: 50%;
+    opacity: .2;
+}
+
+.step_2_point_3 img{
+    position: absolute;
+    top: 0;
+    left: 25px;
+    top: 20px;
+}
+
+.step_2_point_3 .text{
+    position: absolute;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.step_2_point_4{
+    position: absolute;
+    left: 1220px;
+    top: 300px;
+    width: 300px;
+    text-align: right;
+}
+
+.step_2_point_4 .text{
+    width: 250px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.step_2_point_4:after{
+    content: '';
+    background: url('../images/stage_02/line_01.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-left: 20px;
+
+}
+
+.step_2_point_5{
+    position: absolute;
+    left: 1570px;
+    top: 300px;
+}
+
+.step_2_point_5 .outer{
+    display: flex;
+}
+
+.step_2_point_5 .text{
+    width: 150px;
+}
+
+.step_2_point_5 img{
+    margin-left: -40px;
+}
+
+.step_2_point_5 .instruction-text{
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    width: 157px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+	font-family: 'Bangers', cursive;
+	letter-spacing: 3px;
+}
+
+.step_2_point_6 {
+    position: absolute;
+    left: 1700px;
+    top: 50px;
+}
+
+.step_2_point_7{
+    position: absolute;
+    right: -200px;
+    top: 50px;
+}
+
+/* ---------------------------------------------------------------- */
+
+						/* Stage 3 */
+						
+/* ---------------------------------------------------------------- */
+
+
+
+.stage_3{
+	background: url('../images/stage_03/stage_03_bg.png');
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    width: 2000px;
+    z-index: -1;
+}
+
+.stage_3 .step_title{
+    font-size: 1.2em;
+    top: 65%;
+}
+
+.stage_3 .stage_num{
+	color: #125b96;
+}
+
+.step_3_content{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 672px;
+    transform: translateY(-50%);
+}
+
+.step_3_point_1{
+    position: absolute;
+    left: 230px;
+    top: 230px;
+}
+.step_3_point_1 .text{
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 380px;
+    padding: 10px;
+    margin-top: -110px;
+    border: 20px solid transparent;
+    -moz-border-image: url('../images/stage_03/text_frame.png') 10;
+    -webkit-border-image: url('../images/stage_03/text_frame.png') 10;
+    -o-border-image: url('../images/stage_03/text_frame.png') 10;
+    border-image: url('../images/stage_03/text_frame.png') 10;
+}
+
+.step_3_point_1 .text:after{
+    content: '';
+    background: url('../images/stage_03/arrow_01.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 30%;
+    left: 100%;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.step_3_point_2{
+    background: url('../images/stage_03/shadow1.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 270px;
+    bottom: 80px;
+    padding-bottom: 10px;
+    background-position: bottom;
+}
+
+.step_3_point_3{
+    position: absolute;
+    left: 470px;
+    bottom: 90px;
+}
+
+.step_3_point_4 .text{
+    width: 270px;
+    display: grid;
+    place-items: center;
+    margin-left: -10px;
+    border: 20px solid transparent;
+    -moz-border-image: url('../images/stage_03/text_frame_01.png') 20;
+    -webkit-border-image: url('../images/stage_03/text_frame_01.png') 20;
+    -o-border-image: url('../images/stage_03/text_frame_01.png') 20;
+    border-image: url('../images/stage_03/text_frame_01.png') 20;
+}
+
+.step_3_point_4{
+    position: absolute;
+    left: 650px;
+    top: 260px;
+}
+
+/* .step_3_poit_4:after{ */
+	/* content: ''; */
+	/* background: url('../images/stage_03/'); */
+	/* position: absolute; */
+	/* width: 100%; */
+	/* height: 100%; */
+/* } */
+
+.step_3_point_4 .outer{
+    display: flex;
+}
+.step_3_point_4 .outer img{
+    z-index: 99;
+}
+
+.step_3_point_4 .spaceman{
+    position: absolute;
+    top: 85px;
+    left: 85px;
+}
+
+.step_3_point_4:after{
+    content: '';
+    background: url('../images/stage_03/arrow_02.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 80%;
+    margin-top: 20px;
+}
+
+.step_3_point_5{
+    position: absolute;
+    bottom: 90px;
+    left: 800px;
+}
+
+.step_3_point_5 .spaceman-1{
+    margin-right: 30px;
+    position: relative;
+    top: -20px;
+}
+
+.step_3_point_6{
+    position: absolute;
+    bottom: 50px;
+    left: 950px;
+}
+
+
+.step_3_point_6 .outer{
+    display: flex;
+}
+
+.step_3_point_6 .text{
+    width: 200px;
+    margin-top: -50px;
+}
+
+.step_3_point_6 .text:before{
+    content: '';
+    background: url('../images/stage_03/arrow_03.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -140px;
+    left: 75%;
+}
+
+.step_3_point_7{
+    position: absolute;
+    left: 1500px;
+    top: 40px;
+}
+
+.step_3_point_7 .text{
+    width: 157px;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+	font-family: 'Bangers', cursive;
+	letter-spacing: 3px;
+}
+/* ---------------------------------------------------------------- */
+
+						/* Stage 4 */
+						
+/* ---------------------------------------------------------------- */
+
+
+.stage_4{
+	background: url('../images/stage_04/stage_04_bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 2000px;
+}
+
+.stage_4 .step_title{
+    font-size: 1.2em;
+    top: 50%;
+}
+
+.stage_4 .stage_num{
+	color: #53016d;
+}
+
+.step_4_content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 672px;
+    z-index: 1;
+}
+.step_4_point_1{
+    position: absolute;
+    left: 130px;
+}
+
+.step_4_point_1 .text{
+    position: absolute;
+    width: 150px;
+    left: 260px;
+    top: 60px;
+}
+
+.step_4_point_1:before{
+    content: '';
+    position: absolute;
+    top: 110px;
+    left: 540px;
+    width: 100%;
+    height: 100%;
+    background: url('../images/stage_04/arrow_01.png');
+    background-repeat: no-repeat;
+}
+
+.step_4_point_2 {
+    position: absolute;
+    left: 1020px;
+}
+.step_4_point_2 .text{
+    position: absolute;
+    left: -108px;
+    width: 150px;
+    top: 85%;
+}
+
+.step_4_point_2:after{
+    content: '';
+    position: absolute;
+    top: 220px;
+    background: url('../images/stage_04/arrow_02.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    left: 50%;
+}
+
+.step_4_point_2 .text:before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: yellow;
+    left: -40px;
+    top: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 10px #53016d;
+}
+.step_4_point_3{
+    position: absolute;
+    left: 950px;
+    top: 260px;
+}
+
+.step_4_point_3 .text{
+    width: 250px;
+    margin-top: 20px;
+}
+
+.step_4_point_3 .text:before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: yellow;
+    left: -90px;
+    top: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 10px #53016d;
+}
+
+.step_4_point_3 .text:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../images/stage_04/arrow_01.png');
+    left: 260px;
+    top: -30px;
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+}
+
+.step_4_point_4{
+    position: absolute;
+    top: 230px;
+    left: 1200px;
+}
+
+.step_4_point_4 .outer{
+    display: flex;
+    align-items: center;
+}
+
+.step_4_point_4 .outer .text{
+    width: 130px;
+}
+
+.step_4_instruction{
+    position: absolute;
+    right: 90px;
+}
+
+.step_4_instruction .text{
+    position: absolute;
+    right: -70px;
+    font-size: 1.2em;
+    width: 180px;
+    text-transform: uppercase;
+    top: 100px;
+    background: #000000;
+    padding: 10px;
+	font-family: 'Bangers', cursive;
+	letter-spacing: 3px;
+}
+/* ---------------------------------------------------------------- */
+
+						/* Stage 5 */
+						
+/* ---------------------------------------------------------------- */
+
+
+.stage_5{
+	background: url('../images/stage_05/stage_05_bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+    width: 2600px;
+    background-position: bottom;
+}
+
+.stage_5 .step_title{
+    font-size: 1.2em;
+    top: 50%;
+}
+.stage_5 .stage_num{
+	color: #7ad000;
+}
+
+.step_5_content{
+    width: 100%;
+    height: 672px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.step_5_point_1{
+    position: absolute;
+    top: 17px;
+    left: 285px;
+    width: 280px;
+    height: 130px;
+}
+
+.step_5_point_1 .text{
+	width: 80%;
+}
+.step_5_point_1 img{
+	 width: 100%;
+    object-fit: scale-down;
+    position: absolute;
+    top: -30px;
+}
+
+.step_5_point_1:before{
+	content: '';
+    position: absolute;
+    top: 100%;
+    left: 80%;
+    height: 100%;
+    width: 100%;
+    background: url('../images/stage_05/arrow_01.png');
+    background-repeat: no-repeat;
+}
+
+
+
+.step_5_point_2{
+    width: 280px;
+    left: 580px;
+    position: absolute;
+    top: 60px;
+}
+
+.progress_area{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.progress_area:after{
+	    content: '';
+    position: absolute;
+    height: 100px;
+    width: 0;
+    border: 1px dashed #f0bb07;
+    left: 50%;
+    margin-top: 10px;
+}
+
+.step_5_point_6 .progress_area:after{
+	height: 150px;
+}
+
+.step_5_point_3{
+    position: absolute;
+    top: 180px;
+    left: 760px;
+}
+
+.step_5_point_3:before{
+	content: '';
+    position: absolute;
+    background: #589500;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 80%;
+    top: -10px;
+    opacity: 0.7;
+    z-index: -1;
+}
+.step_5_point_4{
+    position: absolute;
+    top: 230px;
+    left: 885px;
+}
+
+.step_5_point_4:before{
+	content: '';
+    position: absolute;
+    background: #589500;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 60%;
+    top: 55%;
+    opacity: 0.7;
+    z-index: -1;
+    
+}
+
+.step_5_point_5{
+    position: absolute;
+    left: 1190px;
+    top: 165px;
+}
+
+.step_5_point_5:before{
+	content: '';
+    position: absolute;
+    background: #589500;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 10px;
+    top: -10px;
+    opacity: 0.7;
+    z-index: -1;
+    
+}
+
+.step_5_point_6{
+    position: absolute;
+    top: 175px;
+    left: 1480px;
+}
+
+.step_5_point_6:before{
+	content: '';
+    position: absolute;
+    background: #589500;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 65%;
+    top: -10px;
+    opacity: 0.7;
+    z-index: -1;
+    
+}
+
+.step_5_point_6:after{
+    content: 'and many more...';
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+	font-weight: bold;
+}
+
+.step_5_instruction{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.step_5_instruction .outer:before{
+    content: '';
+    position: absolute;
+    background: url('../images/stage_05/text_bg.png');
+    top: -60px;
+    left: -85%;
+    width: 330px;
+    background-repeat: no-repeat;
+    height: 100%;
+    
+}
+
+.step_5_instruction .outer p{
+    text-transform: uppercase;
+    color: #000000;
+    position: absolute;
+    top: 50px;
+    left: -140px;
+    font-size: 1.3em;
+    width: 170px;
+	font-family: 'Bangers', cursive;
+	letter-spacing: 3px;
+}
